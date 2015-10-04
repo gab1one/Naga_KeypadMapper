@@ -32,12 +32,12 @@ mv naga /usr/local/bin/
 sudo chmod 755 /usr/local/bin/naga
 
 cd ..
-cp naga.desktop $HOME/.config/autostart/
+cp naga.desktop /home/gabriel/.config/autostart/
 echo "naga $version" >> nagastart.sh
 cp nagastart.sh /usr/local/bin/
 sudo chmod 755 /usr/local/bin/nagastart.sh
-mkdir -p $HOME/.naga
-cp mapping_{01,02}.txt $HOME/.naga/
+mkdir -p /home/gabriel/.naga
+cp mapping_{01,02}.txt /home/gabriel/.naga/
 
 echo 'KERNEL=="event[0-9]*",SUBSYSTEM=="input",GROUP="razer",MODE="640"' > /etc/udev/rules.d/80-naga.rules
 groupadd -f razer
